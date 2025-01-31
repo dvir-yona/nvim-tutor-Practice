@@ -1,4 +1,4 @@
-local json_file = "tutor.json" -- Path to your JSON file, assuming it's in the same directory as init.lua
+local json_file = "tutor.json" 
 
 local function read_file(filename)
   local file = io.open(filename, "r")
@@ -32,15 +32,14 @@ end
 local lesson = get_random_lesson()
 
 if lesson then
-  vim.cmd("enew") -- Open a new empty buffer
+  vim.cmd("enew")
   local current_buffer = vim.api.nvim_get_current_buf()
 
   local lines = vim.split(lesson.content, "\n")
   vim.api.nvim_buf_set_lines(current_buffer, 0, 0, false, lines)
 
-  vim.api.nvim_buf_set_name(current_buffer, "Neovim Tutor Lesson: " .. lesson.lesson) -- Optional: set buffer name
-  vim.opt_local.filetype = "help" -- Optional: set filetype for syntax highlighting if applicable (you might want 'txt' or remove this line)
-
+  vim.api.nvim_buf_set_name(current_buffer, "Neovim Tutor Lesson: " .. lesson.lesson) 
+  vim.opt_local.filetype = "md"
   print("Opened random lesson: " .. lesson.lesson)
 else
   print("Failed to load a random lesson.")
