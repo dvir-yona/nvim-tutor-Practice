@@ -1,6 +1,6 @@
 a Random Questioning Practice to lern nvim,
 
-i have created this repo cuz i needed a quick way to refreash my nvim skills,
+i have created this repo cuz i needed a quick way to refresh my nvim skills,
 # How to use it
 
 ## get to the nvim config:
