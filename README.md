@@ -44,7 +44,7 @@ vim.api.nvim_create_user_command('Learn', function(command_args)
   end
 end, { nargs = '*' })
 ```
-run
+type
 ```
 :so
 ```
