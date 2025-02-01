@@ -31,10 +31,18 @@ echo. > init.lua
 ```
 ## then add this code to your init.lua
 ```
-local tutor = loadfile("tutor.lua")
-vim.api.nvim_create_user_command('Learn', function()
-if (tutor) then tutor() end
-end, {})
+local tutor = require("nvim-tutor-Practice.tutor")
+
+vim.api.nvim_create_user_command('Learn', function(command_args)
+  if tutor then
+    if #command_args.args > 0 then
+      local index = command_args.args
+      tutor.open(index)
+    else
+      tutor.open(nil)
+    end
+  end
+end, { nargs = '*' })
 ```
 run
 ```
