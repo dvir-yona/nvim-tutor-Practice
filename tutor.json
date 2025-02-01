@@ -126,5 +126,5 @@
   {
     "lesson": "Nvim Tutor : Lesson 7.3: COMPLETION",
     "content": "** Command line completion with `<C-d>` and `<Tab>`. **\n\n 1. List the contents of the current directory: `:!ls`\n\n 2. Type the start of a command: `:e`\n\n 3. Press `<C-d>` and Neovim will show a list of commands beginning with \"e\".\n\n 4. Press `<Tab>` and Neovim will complete the command name to \":edit\".\n\n 5. Now add a space and the start of an existing file name: `:edit FIL`\n\n 6. Press `<Tab>`. Neovim will complete the name (\"FIL\" -> \"FILE\", if it is unique).\n\nNOTE: Completion works for many commands. It is especially useful for `:help`."
-  },
+  }
 ]
